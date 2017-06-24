@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/govind94/Trello-Power-Up/issues"
   },
-  "homepage": "https://github.com/govind94/Trello-Power-Up#readme"
+  "homepage": "https://github.com/govind94/Trello-Power-Up#readme",
+  "dependencies": {
+    "cors": "^2.8.3",
+    "express": "^4.15.3"
+  }
 }
