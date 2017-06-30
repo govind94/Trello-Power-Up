@@ -1,23 +1,25 @@
 {
-  "name": "trello",
-  "version": "1.0.0",
-  "description": "",
+  "name": "trello-power-up-tutorial-part-1",
+  "version": "0.0.1",
+  "description": "A Power-Up to go along with the tutorial found at tech.trello.com",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.15.2",
+    "cors": "^2.8.1"
+  },
+  "engines": {
+    "node": "6.10.x"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/govind94/Trello-Power-Up.git"
+    "url": "https://glitch.com/edit/#!/trello-power-up-tutorial-part-one"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/govind94/Trello-Power-Up/issues"
-  },
-  "homepage": "https://github.com/govind94/Trello-Power-Up#readme",
-  "dependencies": {
-    "cors": "^2.8.3",
-    "express": "^4.15.3"
-  }
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
 }

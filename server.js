@@ -1,19 +1,21 @@
 var express = require('express');
-var app = express();
 var cors = require('cors');
 
-// Set port based on environment variable
-// https://nodejs.org/api/process.html#process_process_env
-app.set('port', (process.env.PORT || 5000));
+var app = express();
 
-// Allow Trello to make requests
-// https://github.com/expressjs/cors#simple-usage-enable-all-cors-requests
-app.use(cors({ origin: 'https://trello.com' }));
 
-// Serve static files out of the `public` directory
-// https://expressjs.com/en/starter/static-files.html
-app.use(express.static('public'))
+// your manifest must have appropriate CORS headers, you could also use '*'
+app.use(cors({ origin: '*' }));
 
-app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
+// http://expressjs.com/en/starter/static-files.html
+app.use(express.static('public'));
+
+// http://expressjs.com/en/starter/basic-routing.html
+app.get("*", function (request, response) {
+  response.sendFile(__dirname + '/views/index.html');
+});
+
+// listen for requests :)
+var listener = app.listen(process.env.PORT, function () {
+  console.log('Your app is listening on port ' + listener.address().port);
 });
